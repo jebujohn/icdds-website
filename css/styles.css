@@ -32,7 +32,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 700;
   line-height: 1.2;
@@ -106,7 +111,8 @@ img {
   color: var(--text-muted);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--primary-color);
 }
 
@@ -312,6 +318,30 @@ img {
 .participant-info p {
   color: var(--text-muted);
   font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #0077b5;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  background: #f0f7fa;
+  transition: all 0.2s ease;
+}
+
+.linkedin-link:hover {
+  background: #0077b5;
+  color: white;
+}
+
+.linkedin-link svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* Library Section */
@@ -406,6 +436,7 @@ footer {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -421,19 +452,23 @@ footer {
   .hero h1 {
     font-size: 2.5rem;
   }
+
   .nav-links {
     display: none;
   }
+
   .agenda-item {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
 
-.participant-card, .agenda-day {
+.participant-card,
+.agenda-day {
   scroll-margin-top: 6rem;
 }
