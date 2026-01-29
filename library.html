@@ -115,30 +115,25 @@
             </div>
 
             <div
-                style="margin-top: 4rem; background: var(--bg-offset); padding: 4rem; border-radius: var(--radius-lg); border: 2px dashed var(--border-color);">
-                <i data-lucide="cloud-upload"
-                    style="width: 3rem; height: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
-                <h3>Shared Dropbox Repository</h3>
-                <p style="color: var(--text-muted); max-width: 500px; margin: 0.5rem auto 2rem;">Real-time access to
-                    meeting folders for participants and facilitators.</p>
-
-                <div id="dropbox-container"
-                    style="height: 500px; width: 100%; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+                style="margin-top: 4rem; text-align: center; background: var(--bg-offset); padding: 5rem 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                <div style="width: 80px; height: 80px; background: white; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: var(--primary-color); box-shadow: var(--shadow-md);">
+                    <i data-lucide="folder-key" style="width: 40px; height: 40px;"></i>
                 </div>
-
-                <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs"
-                    data-app-key="x76kc4uhszqtzcr"></script>
-                <script>
-                    Dropbox.embed({
-                        link: "https://www.dropbox.com/scl/fo/2fsw17fv2u29d6it79e0g/AK8dhAeWXG6gBzCqVc-T2eA?rlkey=7572m6le1l5tdlxoactdsapup&st=ob89ra16&dl=0",
-                        container: document.getElementById("dropbox-container"),
-                    }, {
-                        folder: {
-                            view: "list",
-                            headerSize: "small"
-                        }
-                    });
-                </script>
+                <h2 style="font-size: 2.25rem; margin-bottom: 1rem; font-family: var(--font-serif);">Shared Resource Center</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0.5rem auto 2.5rem; font-size: 1.1rem; line-height: 1.6;">
+                    Access our secure Dropbox repository for real-time meeting notes, full presentation decks, and high-resolution data sets from all convening tracks.
+                </p>
+                <a href="https://www.dropbox.com/scl/fo/2fsw17fv2u29d6it79e0g/AK8dhAeWXG6gBzCqVc-T2eA?rlkey=7572m6le1l5tdlxoactdsapup&st=ob89ra16&dl=0" 
+                   target="_blank" 
+                   class="btn btn-primary" 
+                   style="padding: 1.25rem 3rem; font-size: 1.1rem; border-radius: 50px;">
+                    <i data-lucide="external-link"></i>
+                    Open Participant Folder
+                </a>
+                <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-muted);">
+                    <i data-lucide="shield" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>
+                    Restricted to convening participants
+                </p>
             </div>
         </div>
     </main>
