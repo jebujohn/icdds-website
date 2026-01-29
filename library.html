@@ -115,16 +115,30 @@
             </div>
 
             <div
-                style="margin-top: 4rem; text-align: center; background: var(--bg-offset); padding: 4rem; border-radius: var(--radius-lg); border: 2px dashed var(--border-color);">
+                style="margin-top: 4rem; background: var(--bg-offset); padding: 4rem; border-radius: var(--radius-lg); border: 2px dashed var(--border-color);">
                 <i data-lucide="cloud-upload"
                     style="width: 3rem; height: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
                 <h3>Shared Dropbox Repository</h3>
                 <p style="color: var(--text-muted); max-width: 500px; margin: 0.5rem auto 2rem;">Real-time access to
                     meeting folders for participants and facilitators.</p>
-                <a href="#" class="btn btn-primary">
-                    <i data-lucide="external-link"></i>
-                    Open Dropbox
-                </a>
+
+                <div id="dropbox-container"
+                    style="height: 500px; width: 100%; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+                </div>
+
+                <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs"
+                    data-app-key="x76kc4uhszqtzcr"></script>
+                <script>
+                    Dropbox.embed({
+                        link: "https://www.dropbox.com/scl/fo/2fsw17fv2u29d6it79e0g/AK8dhAeWXG6gBzCqVc-T2eA?rlkey=7572m6le1l5tdlxoactdsapup&st=qxrp4gkr&dl=0",
+                        container: document.getElementById("dropbox-container"),
+                    }, {
+                        folder: {
+                            view: "list",
+                            headerSize: "small"
+                        }
+                    });
+                </script>
             </div>
         </div>
     </main>
