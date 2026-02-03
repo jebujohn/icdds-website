@@ -273,6 +273,18 @@ img {
   text-transform: uppercase;
 }
 
+.speaker-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.speaker-link:hover {
+  color: var(--primary-dark);
+  border-bottom: 1px solid var(--primary-dark);
+}
+
 /* Participants Grid */
 .participants-grid {
   display: grid;
@@ -287,13 +299,21 @@ img {
   padding: 2rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
 }
 
 .participant-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+}
+
+.participant-card:target {
+  border-color: var(--primary-color);
+  background: var(--primary-light);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  transform: scale(1.05);
+  z-index: 10;
 }
 
 .participant-avatar {
