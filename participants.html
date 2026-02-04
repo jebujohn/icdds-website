@@ -34,8 +34,13 @@
                 <li><a href="participants.html" class="nav-link active">Participants</a></li>
                 <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
-            <a href="agenda.html" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">Join the
-                Session</a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="agenda.html" class="btn btn-primary nav-btn-desktop"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">View Agenda</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -463,6 +468,7 @@
                     <li><a href="agenda.html">Agenda</a></li>
                     <li><a href="logistics.html">Logistics</a></li>
                     <li><a href="participants.html">Participants</a></li>
+                    <li><a href="library.html">Library</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -484,6 +490,7 @@
     <script>
         lucide.createIcons();
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

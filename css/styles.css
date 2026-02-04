@@ -74,11 +74,11 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
-  height: 4.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  height: 5rem;
   display: flex;
   align-items: center;
 }
@@ -477,6 +477,49 @@ footer {
     display: none;
   }
 
+  .nav-btn-desktop {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+
+  .nav-links.mobile-active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    z-index: 1000;
+    animation: mobileMenuIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-links.mobile-active .nav-link {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+    color: var(--text-main);
+  }
+
+  .nav-links.mobile-active .nav-link.active {
+    color: var(--primary-color);
+  }
+
   .agenda-item {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -486,6 +529,26 @@ footer {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
+
+@keyframes mobileMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.mobile-menu-toggle {
+  display: none;
 }
 
 .participant-card,
