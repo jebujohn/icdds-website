@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops | ICDDS 2026</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .workshop-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .workshop-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .q-section {
+            background: var(--bg-offset);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-top: 1.5rem;
+        }
+
+        .q-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .presentation-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .presentation-item {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+        }
+
+        .presentation-item i {
+            color: var(--primary-color);
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .speaker-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.8rem;
+            background: #f1f5f9;
+            border-radius: 50px;
+            font-size: 0.8125rem;
+            color: var(--text-main);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="shield-check"></i>
+                ICDDS 2026
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                <li><a href="workshops.html" class="nav-link active">Workshops</a></li>
+                <li><a href="logistics.html" class="nav-link">Logistics</a></li>
+                <li><a href="participants.html" class="nav-link">Participants</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="library.html" class="btn btn-primary nav-btn-desktop"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">Workshop Materials</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section" style="background: var(--bg-offset); padding-bottom: 3rem;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-family: var(--font-serif);">Workshops & Tracks</h1>
+            <p style="color: var(--text-muted); font-size: 1.25rem; max-width: 800px;">
+                Detailed parallel tracks and discussion topics for Workshop Sessions 1 and 2.
+            </p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Workshop Session 1 -->
+            <div style="margin-bottom: 4rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem;">
+                    <div style="width: 40px; height: 1px; background: var(--primary-color);"></div>
+                    <h2 style="font-size: 2rem; font-family: var(--font-serif);">Workshop Session 1 (Day 1)</h2>
+                    <a href="agenda.html#workshop-1" class="btn btn-outline"
+                        style="font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 50px;">View in Agenda</a>
+                </div>
+
+                <div class="workshop-grid">
+                    <!-- 1a: Co-infections -->
+                    <div class="workshop-card">
+                        <span class="workshop-tag">Track 1a</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Co-infections</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">
+                            Facilitator: <a href="participants.html#james-platts-mills" class="speaker-link">James
+                                Platts-Mills</a>
+                        </p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Presentations</h4>
+                            <ul class="presentation-list">
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Diagnostics/attribution
+                                </li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Clinical consequences &
+                                    vaccine trial endpoints</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Speakers</h4>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> James
+                                    Platts-Mills</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Liz
+                                    McQuade</span>
+                            </div>
+                        </div>
+
+                        <div class="q-section">
+                            <div class="q-title"><i data-lucide="help-circle"
+                                    style="width: 18px; color: var(--primary-color);"></i> Questions for Workshop</div>
+                            <ul
+                                style="font-size: 0.875rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                                <li>What is a co-infection?, how common are they?</li>
+                                <li>Are they clinically relevant, and do some matter more than others?</li>
+                                <li>Do they need to be considered for vaccine trials?</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="library.html" class="btn btn-outline"
+                                style="width: 100%; justify-content: center; font-size: 0.875rem;">
+                                <i data-lucide="folder"></i> Access Materials
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 1b: Adenovirus -->
+                    <div class="workshop-card">
+                        <span class="workshop-tag">Track 1b</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Adenovirus</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">
+                            Facilitator: <a href="participants.html#firdausi-qadri" class="speaker-link">Firdausi
+                                Qadri</a>
+                        </p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Presentations</h4>
+                            <ul class="presentation-list">
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Burden of adenovirus in
+                                    India</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Severity of adenovirus
+                                    infections</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Role of non-enteric
+                                    adenoviruses</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Adenovirus immunity and
+                                    vaccine prospects</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Speakers</h4>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Tintu
+                                    Varghese</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Maria Garcia
+                                    Quesada</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Ben Lee</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Jen Hendrick
+                                    (remote)</span>
+                            </div>
+                        </div>
+
+                        <div class="q-section">
+                            <div class="q-title"><i data-lucide="help-circle"
+                                    style="width: 18px; color: var(--primary-color);"></i> Questions for Workshop</div>
+                            <ul
+                                style="font-size: 0.875rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                                <li>How much does adenovirus contribute to diarrhea morbidity? Mortality?</li>
+                                <li>How important are non-enteric adenoviruses?</li>
+                                <li>What research is needed to better clarify the role/importance of adenovirus?</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="library.html" class="btn btn-outline"
+                                style="width: 100%; justify-content: center; font-size: 0.875rem;">
+                                <i data-lucide="folder"></i> Access Materials
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 1c: Special populations -->
+                    <div class="workshop-card">
+                        <span class="workshop-tag">Track 1c</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Special populations</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">
+                            Facilitator: <a href="participants.html#iruka-okeke" class="speaker-link">Iruka Okeke</a>
+                        </p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Presentations</h4>
+                            <ul class="presentation-list">
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Adult diarrhea –
+                                    Cameroon</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Adult diarrhea – Peru
+                                </li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> HIV</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Can traveler-derived
+                                    genomic data strengthen enteric surveillance in LMICs?</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Speakers</h4>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Jerome
+                                    Ateudjieu</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Claudio
+                                    Lanata</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Niyi
+                                    Bejide</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Kate
+                                    Baker</span>
+                            </div>
+                        </div>
+
+                        <div class="q-section">
+                            <div class="q-title"><i data-lucide="help-circle"
+                                    style="width: 18px; color: var(--primary-color);"></i> Questions for Workshop</div>
+                            <ul
+                                style="font-size: 0.875rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                                <li>How can we capture diarrhea burden and etiology in special populations?</li>
+                                <li>What is the evidence it is variable?</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="library.html" class="btn btn-outline"
+                                style="width: 100%; justify-content: center; font-size: 0.875rem;">
+                                <i data-lucide="folder"></i> Access Materials
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop Session 2 -->
+            <div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem;">
+                    <div style="width: 40px; height: 1px; background: var(--primary-color);"></div>
+                    <h2 style="font-size: 2rem; font-family: var(--font-serif);">Workshop Session 2 (Day 2)</h2>
+                    <a href="agenda.html#workshop-2" class="btn btn-outline"
+                        style="font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 50px;">View in Agenda</a>
+                </div>
+
+                <div class="workshop-grid">
+                    <!-- 2a: Nonclinical approaches -->
+                    <div class="workshop-card">
+                        <span class="workshop-tag">Track 2a</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Nonclinical approaches to diarrhea
+                            surveillance</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">
+                            Facilitators: <a href="participants.html#nivedita-gupta" class="speaker-link">Nivedita
+                                Gupta</a> & <a href="participants.html#supriya-kumar" class="speaker-link">Supriya
+                                Kumar</a>
+                        </p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Presentations</h4>
+                            <ul class="presentation-list">
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> WES in India</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> WES for enteric
+                                    pathogens</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> WES for Shigella</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Seroepidemiology</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Speakers</h4>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Nivedita
+                                    Gupta</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Mami
+                                    Taniuchi</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Jen Cornick
+                                    (remote)</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Richelle
+                                    Charles</span>
+                            </div>
+                        </div>
+
+                        <div class="q-section">
+                            <div class="q-title"><i data-lucide="help-circle"
+                                    style="width: 18px; color: var(--primary-color);"></i> Questions for Workshop</div>
+                            <ul
+                                style="font-size: 0.875rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                                <li>What are the diarrheal pathogens for which WES and/or seroepidemiology has a strong
+                                    use case?</li>
+                                <li>What are the limitations?</li>
+                                <li>For what purposes can the data be used?</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="library.html" class="btn btn-outline"
+                                style="width: 100%; justify-content: center; font-size: 0.875rem;">
+                                <i data-lucide="folder"></i> Access Materials
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2b: Vaccines -->
+                    <div class="workshop-card">
+                        <span class="workshop-tag">Track 2b</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Vaccines</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.5rem;">
+                            Facilitator: <a href="participants.html#miren-iturriza" class="speaker-link">Miren
+                                Iturriza</a>
+                        </p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Presentations</h4>
+                            <ul class="presentation-list">
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Oral vaccine performance
+                                    for rotavirus and other enteric diseases</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Indirect protection</li>
+                                <li class="presentation-item"><i data-lucide="play-circle"></i> Vaccine impact on AMR –
+                                    lessons learned from TCV</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1rem;">
+                                Speakers</h4>
+                            <div style="display: flex; flex-wrap: wrap;">
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> Carl
+                                    Kirkwood</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> John
+                                    Clemens</span>
+                                <span class="speaker-tag"><i data-lucide="user" style="width: 14px;"></i> James
+                                    Meiring</span>
+                            </div>
+                        </div>
+
+                        <div class="q-section">
+                            <div class="q-title"><i data-lucide="help-circle"
+                                    style="width: 18px; color: var(--primary-color);"></i> Questions for Workshop</div>
+                            <ul
+                                style="font-size: 0.875rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+                                <li>How to understand and articulate vaccine performance in LMICs?</li>
+                                <li>What diarrhea surveillance do we need in place to support vaccines (development,
+                                    evaluation, policy)?</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="library.html" class="btn btn-outline"
+                                style="width: 100%; justify-content: center; font-size: 0.875rem;">
+                                <i data-lucide="folder"></i> Access Materials
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <div class="footer-logo">ICDDS 2026</div>
+                <p class="footer-desc">International Convening on Diarrheal Disease Surveillance. Bringing together
+                    global expertise to solve enteric health challenges.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="participants.html">Participants</a></li>
+                    <li><a href="library.html">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:jesin@hallmarkevents.in">jesin@hallmarkevents.in</a></li>
+                    <li style="opacity: 0.7;">Marriott Goa Resort & Spa</li>
+                    <li style="opacity: 0.7;">Miramar, Panaji, Goa</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 International Convening on Diarrheal Disease Surveillance. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
