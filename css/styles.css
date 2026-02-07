@@ -116,6 +116,10 @@ img {
   color: var(--primary-color);
 }
 
+.mobile-menu-toggle {
+  display: none;
+}
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -520,6 +524,10 @@ footer {
     color: var(--primary-color);
   }
 
+  .nav-btn-desktop {
+    display: none;
+  }
+
   .agenda-item {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -545,10 +553,6 @@ footer {
 
 body.menu-open {
   overflow: hidden;
-}
-
-.mobile-menu-toggle {
-  display: none;
 }
 
 .participant-card,
