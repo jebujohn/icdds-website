@@ -349,9 +349,11 @@ img {
   object-position: center;
 }
 
-#gagandeep-kang .participant-avatar img {
+#gagandeep-kang .participant-avatar img,
+#jacob-john .participant-avatar img,
+#venkat-mohan .participant-avatar img {
   object-position: 50% 15%;
-  /* Nudge up to frame the face better */
+  /* Nudge up to frame vertical portraits better */
 }
 
 .participant-info h3 {
