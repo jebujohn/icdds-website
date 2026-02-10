@@ -350,10 +350,14 @@ img {
 }
 
 #gagandeep-kang .participant-avatar img,
-#jacob-john .participant-avatar img,
 #venkat-mohan .participant-avatar img {
   object-position: 50% 15%;
-  /* Nudge up to frame vertical portraits better */
+}
+
+#jacob-john .participant-avatar img {
+  object-position: 50% 15%;
+  transform: scale(0.9);
+  /* Zoom out a bit */
 }
 
 .participant-info h3 {
