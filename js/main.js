@@ -5,16 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-active');
+      const isOpened = navLinks.classList.toggle('mobile-active');
       body.classList.toggle('menu-open');
       
       // Update icon
-      const icon = mobileToggle.querySelector('i');
-      if (navLinks.classList.contains('mobile-active')) {
-        icon.setAttribute('data-lucide', 'x');
-      } else {
-        icon.setAttribute('data-lucide', 'menu');
-      }
+      mobileToggle.innerHTML = isOpened 
+        ? '<i data-lucide="x"></i>' 
+        : '<i data-lucide="menu"></i>';
+      
       lucide.createIcons();
     });
   }
@@ -23,11 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.nav-link');
   links.forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.classList.remove('mobile-active');
-      body.classList.remove('menu-open');
-      const icon = mobileToggle.querySelector('i');
-      icon.setAttribute('data-lucide', 'menu');
-      lucide.createIcons();
+      if (navLinks.classList.contains('mobile-active')) {
+        navLinks.classList.remove('mobile-active');
+        body.classList.remove('menu-open');
+        mobileToggle.innerHTML = '<i data-lucide="menu"></i>';
+        lucide.createIcons();
+      }
     });
   });
 });

@@ -124,6 +124,13 @@ img {
 
 .mobile-menu-toggle {
   display: none;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10001;
+  /* Above everyone */
 }
 
 /* Hero Section */
@@ -556,45 +563,66 @@ footer {
 
   .nav-links {
     display: none;
-  }
-
-  .nav-btn-desktop {
-    display: none;
+    /* Default hidden on mobile */
   }
 
   .mobile-menu-toggle {
     display: block;
-    background: none;
-    border: none;
-    color: var(--text-main);
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1001;
   }
 
   .nav-links.mobile-active {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    z-index: 1000;
-    animation: mobileMenuIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #ffffff !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    z-index: 99999 !important;
+    padding: 2rem !important;
+    margin: 0 !important;
+    /* Removed container animation for instant solid background */
   }
 
   .nav-links.mobile-active .nav-link {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     font-family: var(--font-serif);
     color: var(--text-main);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: menuItemFadeIn 0.4s ease forwards;
+  }
+
+  /* Stagger animations for links */
+  .nav-links.mobile-active li:nth-child(1) .nav-link {
+    animation-delay: 0.1s;
+  }
+
+  .nav-links.mobile-active li:nth-child(2) .nav-link {
+    animation-delay: 0.15s;
+  }
+
+  .nav-links.mobile-active li:nth-child(3) .nav-link {
+    animation-delay: 0.2s;
+  }
+
+  .nav-links.mobile-active li:nth-child(4) .nav-link {
+    animation-delay: 0.25s;
+  }
+
+  .nav-links.mobile-active li:nth-child(5) .nav-link {
+    animation-delay: 0.3s;
+  }
+
+  .nav-links.mobile-active li:nth-child(6) .nav-link {
+    animation-delay: 0.35s;
   }
 
   .nav-links.mobile-active .nav-link.active {
@@ -613,6 +641,18 @@ footer {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@keyframes menuItemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
