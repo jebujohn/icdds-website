@@ -13,9 +13,6 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
     <!-- Styling -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -40,7 +37,7 @@
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <a href="logistics.html" class="btn btn-primary nav-btn-desktop"
                     style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">Venue Info</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
                     <i data-lucide="menu"></i>
                 </button>
             </div>
@@ -506,11 +503,9 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
-    <script src="js/main.js"></script>
-    <script src="js/agenda.js"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/agenda.js" defer></script>
 </body>
 
 </html>
