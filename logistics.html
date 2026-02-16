@@ -28,7 +28,7 @@
                 <img src="assets/logo.png" alt="ICDDS 2026 Logo" class="nav-logo-img">
                 ICDDS 2026
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="main-nav">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="agenda.html" class="nav-link">Agenda</a></li>
                 <li><a href="workshops.html" class="nav-link">Workshops</a></li>
@@ -39,7 +39,8 @@
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <a href="agenda.html" class="btn btn-primary nav-btn-desktop"
                     style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">View Agenda</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                    aria-controls="main-nav" aria-haspopup="true">
                     <i data-lucide="menu"></i>
                 </button>
             </div>
