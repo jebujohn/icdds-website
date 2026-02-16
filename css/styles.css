@@ -363,7 +363,7 @@ img {
 }
 
 #venkat-mohan .participant-avatar img {
-  object-position: 50% 20%;
+  object-position: center;
   transform: scale(1.2);
 }
 
