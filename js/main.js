@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   const body = document.body;

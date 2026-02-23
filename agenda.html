@@ -14,7 +14,7 @@
         rel="stylesheet">
 
     <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Styling -->
     <link rel="stylesheet" href="css/styles.css">
@@ -26,7 +26,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="ICDDS 2026 Logo" class="nav-logo-img">
+                <img loading="lazy" decoding="async" src="assets/logo.png" alt="ICDDS 2026 Logo" class="nav-logo-img">
                 ICDDS 2026
             </a>
             <ul class="nav-links" id="main-nav">
@@ -544,9 +544,6 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
     <script src="js/main.js"></script>
     <script src="js/agenda.js"></script>
 </body>
