@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polls | ICDDS 2026</title>
+    <meta name="description"
+        content="Participate in live polls and surveys for the International Convening on Diarrheal Disease Surveillance (ICDDS 2026).">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        .polls-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .pulse-btn {
+            position: relative;
+        }
+
+        .pulse-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--radius-md);
+            background: var(--accent-color);
+            opacity: 0.4;
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+
+            70% {
+                transform: scale(1.1, 1.3);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="ICDDS 2026 Logo" class="nav-logo-img">
+                ICDDS 2026
+            </a>
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+                <li><a href="logistics.html" class="nav-link">Logistics</a></li>
+                <li><a href="participants.html" class="nav-link">Participants</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
+                <li><a href="polls.html" class="nav-link active">Polls</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="polls.html" class="btn btn-primary nav-btn-desktop pulse-btn"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.875rem; background-color: var(--accent-color);">Live
+                    Polls</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                    aria-controls="main-nav" aria-haspopup="true">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <header style="text-align: center; margin-bottom: 2rem;">
+                    <span class="hero-tag"
+                        style="background: var(--accent-color); color: white; display: inline-block; padding: 0.25rem 1rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 700; margin-bottom: 1rem;">Interactive
+                        Session</span>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Live Polls & Surveys</h1>
+                    <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">Your participation is vital.
+                        Please use the interactive panel below to share your insights during the convening sessions.</p>
+                </header>
+
+                <div class="polls-container">
+                    <iframe src="https://vevox.app/#/m/110415573" height="100%" width="100%" frameBorder="0"
+                        style="min-height: 800px;" title="Vevox"></iframe>
+                </div>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">
+                        Having trouble with the embedded view? <a href="https://vevox.app/#/m/110415573" target="_blank"
+                            style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">Open
+                            Polls in New Tab</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <div class="footer-logo">ICDDS 2026</div>
+                <p class="footer-desc">International Convening on Diarrheal Disease Surveillance. Bringing together
+                    global
+                    expertise to solve enteric health challenges.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="participants.html">Participants</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="polls.html">Polls</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:jesin@hallmarkevents.in">jesin@hallmarkevents.in</a></li>
+                    <li style="opacity: 0.7;">Marriott Goa Resort & Spa</li>
+                    <li style="opacity: 0.7;">Miramar, Panaji, Goa</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 International Convening on Diarrheal Disease Surveillance. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
